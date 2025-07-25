@@ -49,4 +49,31 @@ Apache Kafka is a distributed streaming platform designed for high-throughput, f
 ### Start ZooKeeper (Kafka versions < 3.0)
 ```bash
 zookeeper-server-start.sh config/zookeeper.properties
+# Start Kafka Broker
+kafka-server-start.sh config/server.properties
+
+# Create a topic named "my-topic" with 3 partitions and replication factor 1
+kafka-topics.sh --create --topic my-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
+# List all topics
+kafka-topics.sh --list --bootstrap-server localhost:9092
+
+# Describe a topic named "my-topic"
+kafka-topics.sh --describe --topic my-topic --bootstrap-server localhost:9092
+
+# Send messages to topic "my-topic"
+kafka-console-producer.sh --topic my-topic --bootstrap-server localhost:9092
+
+# Read messages from topic "my-topic" from the beginning
+kafka-console-consumer.sh --topic my-topic --bootstrap-server localhost:9092 --from-beginning
+
+# Delete a topic named "my-topic"
+kafka-topics.sh --delete --topic my-topic --bootstrap-server localhost:9092
+
+# List consumer groups
+kafka-consumer-groups.sh --list --bootstrap-server localhost:9092
+
+# Describe a consumer group named "my-group"
+kafka-consumer-groups.sh --describe --group my-group --bootstrap-server localhost:9092
+
 
