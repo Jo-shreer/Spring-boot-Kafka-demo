@@ -1,4 +1,4 @@
-# Spring-boot-demo
+# Spring-boot-Kafka-demo
 Spring boot concepts with code
 
 # Apache Kafka Notes
