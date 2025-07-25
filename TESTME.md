@@ -20,7 +20,7 @@ Follow these steps to test your Spring Boot Kafka application:
 - You can trigger the producer method (`publishMessage`) from a REST endpoint, a command line runner, or directly in code.
 - Example (if using REST):
   ```
-  sh got to browser - http://localhost:8080/publish?message=HelloKafka
+  got to browser - http://localhost:8080/publish?message=HelloKafka
   ```
 
 ### 4. Check Consumer Logs
